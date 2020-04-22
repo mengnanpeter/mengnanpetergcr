@@ -183,7 +183,7 @@ image_pull(){
         [ ! -d "$domain/$namespace/$image_name" ] && mkdir -p "$domain/$namespace/$image_name"
         [ -f "$domain/$namespace/$image_name"/latest ] && mv $domain/$namespace/$image_name/latest{,.old}
 
-	SYNC_IMAGE_LOC=$domain"/"$namespace"/"$image_name
+	SYNC_IMAGE_LOC=$domain1"/"$namespace"/"$image_name
 	echo "peter debug: "$SYNC_IMAGE_LOC
         while read tag;do
         #处理latest标签
