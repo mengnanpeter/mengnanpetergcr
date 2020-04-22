@@ -185,8 +185,9 @@ image_pull(){
 
 	SYNC_IMAGE_LOC=$domain1"/"$namespace"/"$image_name
 	echo "peter debug: "$SYNC_IMAGE_LOC
-        while read tag;do
+#        while read tag;do
         #处理latest标签
+	    tag=latest
 	    echo "peter confused: "$tag
             [[ "$tag" == latest && -f "$domain/$namespace/$image_name"/latest.old ]] && {
                 $@::latest_digest $SYNC_IMAGE_NAME > $domain/$namespace/$image_name/latest
@@ -201,7 +202,7 @@ image_pull(){
                 [ -n "$tag" ] && image_tag $SYNC_IMAGE_NAME $tag $MY_REPO/$MY_REPO_IMAGE_NAME
                 echo >&5
             }&
-         done < <($@::tag $SYNC_IMAGE_LOC)
+#         done < <($@::tag $SYNC_IMAGE_LOC)
 #        done < <($@::tag $SYNC_IMAGE_NAME)
         wait
         img_clean $domain $namespace $image_name $@::latest_digest
