@@ -1,4 +1,4 @@
-uzzbench/runners/aflsmart
+fuzzbench/runners/aflsmart
 fuzzbench/runners/eclipser
 fuzzbench/runners/entropic
 fuzzbench/runners/fairfuzz
