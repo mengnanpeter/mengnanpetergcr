@@ -1,5 +1,4 @@
-fuzzbench/oss-fuzz/runners/mopt
-fuzzbench/oss-fuzz/runners/qsym
-fuzzbench/oss-fuzz/runners/wafl
 fuzzbench/oss-fuzz/builders
 fuzzbench/oss-fuzz/runners/libfuzzer_value_profile
+oss-fuzz-base
+cloud-builders
